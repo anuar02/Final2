@@ -375,6 +375,18 @@ footer {
   padding: 0.7rem 2.5rem;
 }
 @media only screen and (max-width: 700px) {
+  .scores {
+    width: 100%;
+  }
+  .num-goals {
+    padding: 0 0rem;
+  }
+  .team {
+    width: 50%;
+  }
+  .in-goal {
+    width: 100%;
+  }
   .nav-links {
     padding-left: 20%;
   }
@@ -384,19 +396,9 @@ footer {
   .cont1 {
     display: block;
     border-radius: 20px;
-
-  }
-  .btn {
-    left: 55%;
-  }
-  img {
-    padding-left: 10%;
-  }
-  span {
-    margin-left: 5%;
   }
   figcaption {
-    margin-left: 3%;
+    left: 56.5%;
   }
 }
 .bbb-col img{
