@@ -182,7 +182,7 @@ flex-direction: column;
   width: 77px;
   height: 33px;
   transition: 0.2s;
-  font-size: 14px
+  
 }
 
 .scores {
@@ -204,7 +204,7 @@ flex-direction: column;
 }
 
 .num-goals {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
 }
 .shadow-textarea textarea.form-control::placeholder {
   font-weight: 300;
