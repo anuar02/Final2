@@ -26,12 +26,12 @@ app.get("/images/Anuar.png", function (req, res) {
   res.sendFile(path.join(__dirname + "/images/Anuar.png"));
   //__dirname : It will resolve to your project folder.
 });
-app.get("/images/Anuar.png", function (req, res) {
+app.get("/images/Amir.png", function (req, res) {
   res.sendFile(path.join(__dirname + "/images/Amir.png"));
   //__dirname : It will resolve to your project folder.
 });
-app.get("/images/Anuar.png", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/Gulzhan.png"));
+app.get("/images/Gulzhan.jpg", function (req, res) {
+  res.sendFile(path.join(__dirname + "/images/Gulzhan.jpg"));
   //__dirname : It will resolve to your project folder.
 });
 app.get("/images/field.png", function (req, res) {
