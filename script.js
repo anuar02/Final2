@@ -27,6 +27,17 @@ const score2 = document.getElementById("score2");
 const list1 = document.getElementById("list1"); 
 const list2 = document.getElementById("list2");
 
+let one = "(1)";
+let two = "(1, 1), (2)";
+let three = "(1, 1, 1), (1, 2), (3)";
+let four = "(1, 1, 1, 1), (1, 1, 2), (2, 2), (1, 3), (4)";
+let five =
+  "(1, 1, 1, 1, 1), (1, 1, 1, 2), (1, 2, 2), (1, 1, 3), (2, 3), (1, 4), (5)";
+let six =
+  "(1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 2), (1, 1, 2, 2), (2, 2, 2), (1, 1, 1, 3), (1, 2, 3), (3, 3), (1, 1, 4), (2, 4), (1, 5), (6)";
+let seven =
+  "(1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 2), (1, 1, 1, 2, 2), (1, 2, 2, 2), (1, 1, 1, 1, 3), (1, 1, 2, 3), (2, 2, 3), (1, 3, 3), (1, 1, 1, 4), (1, 2, 4), (3, 4), (1, 1, 5), (2, 5), (1, 6), (7)";
+
 //when the team1 is clicked, overlay and hidden layer become visible
 team1.addEventListener("click", function () {
   hidden1.style.visibility = "visible";
@@ -149,48 +160,42 @@ play.addEventListener("click", function () {
     overlay4.style.backgroundColor = "rgb(4, 185, 85)";
   }
     // all possible combinations that add up to a given score for team 1
-  if (goals1.value == "1") {
-    list1.innerHTML = "(1)";
+ if (goals1.value == "1") {
+    list1.innerHTML = one;
   } else if (goals1.value == "2") {
-    list1.innerHTML = "(1, 1), (2)";
+    list1.innerHTML = two;
   } else if (goals1.value == "3") {
-    list1.innerHTML = "(1, 1, 1), (1, 2), (3)";
+    list1.innerHTML = three;
   } else if (goals1.value == "4") {
-    list1.innerHTML = "(1, 1, 1, 1), (1, 1, 2), (2, 2), (1, 3), (4)";
+    list1.innerHTML = four;
   } else if (goals1.value == "5") {
-    list1.innerHTML =
-      "(1, 1, 1, 1, 1), (1, 1, 1, 2), (1, 2, 2), (1, 1, 3), (2, 3), (1, 4), (5)";
+    list1.innerHTML = five;
   } else if (goals1.value == "6") {
-    list1.innerHTML =
-      "(1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 2), (1, 1, 2, 2), (2, 2, 2), (1, 1, 1, 3), (1, 2, 3), (3, 3), (1, 1, 4), (2, 4), (1, 5), (6)";
+    list1.innerHTML = six;
   } else if (goals1.value == "0") {
     list1.innerHTML = "(0)";
   } else {
-    list1.innerHTML =
-      "(1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 2), (1, 1, 1, 2, 2), (1, 2, 2, 2), (1, 1, 1, 1, 3), (1, 1, 2, 3), (2, 2, 3), (1, 3, 3), (1, 1, 1, 4), (1, 2, 4), (3, 4), (1, 1, 5), (2, 5), (1, 6), (7)";
+    list1.innerHTML = seven;
   }
 
   list1.innerHTML = `Possible combinations of goals of Team 1: <br> ${list1.innerHTML}`;
   // all possible combinations that add up to a given score for team 2
   if (goals2.value == "1") {
-    list2.innerHTML = "1";
+    list2.innerHTML = one;
   } else if (goals2.value == "2") {
-    list2.innerHTML = "(1, 1), (2)";
+    list2.innerHTML = two;
   } else if (goals2.value == "3") {
-    list2.innerHTML = "(1, 1, 1), (1, 2), (3)";
+    list2.innerHTML = three;
   } else if (goals2.value == "4") {
-    list2.innerHTML = "(1, 1, 1, 1), (1, 1, 2), (2, 2), (1, 3), (4)";
+    list2.innerHTML = four;
   } else if (goals2.value == "5") {
-    list2.innerHTML =
-      "(1, 1, 1, 1, 1), (1, 1, 1, 2), (1, 2, 2), (1, 1, 3), (2, 3), (1, 4), (5)";
+    list2.innerHTML = five;
   } else if (goals2.value == "6") {
-    list2.innerHTML =
-      "(1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 2), (1, 1, 2, 2), (2, 2, 2), (1, 1, 1, 3), (1, 2, 3), (3, 3), (1, 1, 4), (2, 4), (1, 5), (6)";
+    list2.innerHTML = six;
   } else if (goals2.value == "0") {
     list2.innerHTML = "(0)";
   } else {
-    list2.innerHTML =
-      "(1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 2), (1, 1, 1, 2, 2), (1, 2, 2, 2), (1, 1, 1, 1, 3), (1, 1, 2, 3), (2, 2, 3), (1, 3, 3), (1, 1, 1, 4), (1, 2, 4), (3, 4), (1, 1, 5), (2, 5), (1, 6), (7)";
+    list2.innerHTML = seven;
   }
   list2.innerHTML = `Possible combinations of goals of Team 2: <br> ${list2.innerHTML}`;
 });
