@@ -105,6 +105,10 @@ overlay2.addEventListener("click", function () {
 
 //clicking on play button
 play.addEventListener("click", function () {
+  if (goals1.value < 0 || goals2.value < 0) {
+    alert("The number of goals is less than 0");
+    return;
+  }
   score1.innerHTML = goals1.value;
   score2.innerHTML = goals2.value;
   if (document.getElementById("name1").value === "") {
