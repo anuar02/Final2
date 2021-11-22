@@ -4,57 +4,20 @@ const port = 3000;
 const path = require("path");
 
 //express app.get
-
+app.use(express.static(path.join(__dirname, "/")));
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
   //__dirname : It will resolve to your project folder.
-  //__dirname returns the directory that the currently executing script is in. 
-  });
+  //__dirname returns the directory that the currently executing script is in.
+});
 app.get("/index.html", function (req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/style.css", function (req, res) {
-  res.sendFile(path.join(__dirname + "/style.css"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/images/back.jpg", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/back.jpg"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/images/Anuar.png", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/Anuar.png"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/images/Amir.png", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/Amir.png"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/images/Gulzhan.jpg", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/Gulzhan.jpg"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/images/field.png", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/field.png"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/images/logo.png", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/logo.png"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/images/ball.png", function (req, res) {
-  res.sendFile(path.join(__dirname + "/images/ball.png"));
-  //__dirname : It will resolve to your project folder.
-});
-app.get("/script.js", function (req, res) {
-  res.sendFile(path.join(__dirname + "/script.js"));
   //__dirname : It will resolve to your project folder.
 });
 app.get("/about.html", function (req, res) {
   res.sendFile(path.join(__dirname + "/about.html"));
   //__dirname : It will resolve to your project folder.
 });
-
 
 //Resource 1 (Team photo): Photo of your team (e.g. localhost:3000/about/team_photo
 app.get("/about/team_photo", function (req, res) {
@@ -70,6 +33,43 @@ app.get("/video", function (req, res) {
   );
 });
 app.listen(port);
+// app.get("/style.css", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/style.css"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/images/back.jpg", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/images/back.jpg"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/images/Anuar.png", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/images/Anuar.png"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/images/Amir.png", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/images/Amir.png"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/images/Gulzhan.jpg", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/images/Gulzhan.jpg"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/images/field.png", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/images/field.png"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/images/logo.png", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/images/logo.png"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/images/ball.png", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/images/ball.png"));
+//   //__dirname : It will resolve to your project folder.
+// });
+// app.get("/script.js", function (req, res) {
+//   res.sendFile(path.join(__dirname + "/script.js"));
+//   //__dirname : It will resolve to your project folder.
+// });
+
 
 // NODE JS
 // function serveStaticFile(res, path, contentType, responseCode) {
